@@ -185,15 +185,15 @@ CHARGING_STATUS_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
     else (vehicle.dashboard.charging_status),
     attributes_fn=lambda vehicle: None,  # noqa : ARG005
 )
-REMAINING_CHARGING_TIME_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
-    key="remaining_charging_time",
-    translation_key="remaining_charging_time",
+REMAINING_CHARGE_TIME_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
+    key="remaining_charge_time",
+    translation_key="remaining_charge_time",
     icon="mdi:battery-charging",
     device_class=SensorDeviceClass.DURATION,
     state_class=SensorStateClass.MEASUREMENT,
     value_fn=lambda vehicle: None
     if vehicle.dashboard is None
-    else (vehicle.dashboard.remaining_charging_time),
+    else (vehicle.dashboard.remaining_charge_time),
     attributes_fn=lambda vehicle: None,  # noqa : ARG005
 )
 
@@ -333,7 +333,7 @@ def create_sensor_configurations(metric_values: bool) -> list[dict[str, Any]]:  
             "suggested_unit": None,
         },
         {
-            "description": REMAINING_CHARGING_TIME_ENTITY_DESCRIPTION,
+            "description": REMAINING_CHARGE_TIME_ENTITY_DESCRIPTION,
             "capability_check": lambda v: get_vehicle_capability(
                 v, "econnect_vehicle_status_capable"
             )

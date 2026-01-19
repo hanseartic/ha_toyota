@@ -65,6 +65,12 @@
       "total_range": {
         "name": "Gesamtreichweite"
       },
+      "charging_status": {
+        "name": "Ladezustand"
+      },
+      "remaining_charge_time": {
+        "name": "Verbleibende Ladezeit"
+      },
       "current_day_statistics": {
         "name": "Aktuelle Tagesstatistiken"
       },

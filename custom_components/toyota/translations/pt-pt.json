@@ -65,6 +65,12 @@
       "total_range": {
         "name": "Autonomia total"
       },
+      "charging_status": {
+        "name": "Estado de carregamento"
+      },
+      "remaining_charge_time": {
+        "name": "Tempo de carregamento restante"
+      },
       "current_day_statistics": {
         "name": "Current day statistics"
       },

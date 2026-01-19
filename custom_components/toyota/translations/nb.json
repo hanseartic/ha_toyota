@@ -65,6 +65,12 @@
       "total_range": {
         "name": "Total range"
       },
+      "charging_status": {
+        "name": "Charging status"
+      },
+      "remaining_charge_time": {
+        "name": "Remaining charging time"
+      },
       "current_day_statistics": {
         "name": "Current day statistics"
       },

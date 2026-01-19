@@ -65,6 +65,12 @@
       "total_range": {
         "name": "Total range"
       },
+      "charging_status": {
+        "name": "Opladningsstatus"
+      },
+      "remaining_charge_time": {
+        "name": "Resterende opladningstid"
+      },
       "current_day_statistics": {
         "name": "Statistik for denne dag"
       },

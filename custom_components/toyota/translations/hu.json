@@ -65,6 +65,12 @@
       "total_range": {
         "name": "Teljes hatótávolság"
       },
+      "charging_status": {
+        "name": "Töltési állapot"
+      },
+      "remaining_charge_time": {
+        "name": "Hátralévő töltési idő"
+      },
       "current_day_statistics": {
         "name": "Mai napi statisztika"
       },
