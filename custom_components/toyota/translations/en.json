@@ -152,5 +152,13 @@
         "name": "Taillights"
       }
     }
+  },
+  "entity_component": {
+    "charging_status": {
+      "state": {
+        "none": "Not connected",
+        "plugged": "Plugged in"
+      }
+    }
   }
 }

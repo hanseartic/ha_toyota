@@ -152,5 +152,13 @@
         "name": "Rückleuchten"
       }
     }
+  },
+  "entity_component": {
+    "charging_status": {
+      "state": {
+        "none": "Nicht verbunden",
+        "plugged": "Eingesteckt"
+      }
+    }
   }
 }
