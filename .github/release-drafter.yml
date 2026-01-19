@@ -1,0 +1,22 @@
+name-template: "v$RESOLVED_VERSION 🌈"
+tag-template: "v$RESOLVED_VERSION"
+sort-direction: ascending
+categories:
+  - title: "⚠️ Breaking changes"
+    labels: [":warning: breaking change"]
+  - title: "🚀 Features"
+    labels: [":rocket: feature"]
+  - title: "🔧 Code enhancements"
+    labels: [":wrench: enhancement"]
+  - title: "🐛 Bug Fixes"
+    labels: [":bug: bug"]
+  - title: "💬 Translations"
+    labels: [":speech_balloon: translation"]
+  - title: "📝 Documentation"
+    labels: [":memo: documentation"]
+  - title: "🎲 Dependencies"
+    labels: [":game_die: dependencies"]
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+template: |
+  $CHANGES
