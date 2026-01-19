@@ -174,6 +174,28 @@ TOTAL_RANGE_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
     suggested_display_precision=0,
     attributes_fn=lambda vehicle: None,  # noqa : ARG005
 )
+CHARGING_STATUS_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
+    key="charging_status",
+    translation_key="charging_status",
+    icon="mdi:battery-charging",
+    device_class=SensorDeviceClass.ENUM,
+    state_class=SensorStateClass.MEASUREMENT,
+    value_fn=lambda vehicle: None
+    if vehicle.dashboard is None
+    else (vehicle.dashboard.charging_status),
+    attributes_fn=lambda vehicle: None,  # noqa : ARG005
+)
+REMAINING_CHARGING_TIME_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
+    key="remaining_charging_time",
+    translation_key="remaining_charging_time",
+    icon="mdi:battery-charging",
+    device_class=SensorDeviceClass.DURATION,
+    state_class=SensorStateClass.MEASUREMENT,
+    value_fn=lambda vehicle: None
+    if vehicle.dashboard is None
+    else (vehicle.dashboard.remaining_charging_time),
+    attributes_fn=lambda vehicle: None,  # noqa : ARG005
+)
 
 STATISTICS_ENTITY_DESCRIPTIONS_DAILY = ToyotaStatisticsSensorEntityDescription(
     key="current_day_statistics",
@@ -300,6 +322,24 @@ def create_sensor_configurations(metric_values: bool) -> list[dict[str, Any]]:  
             ),
             "native_unit": get_length_unit(metric_values),
             "suggested_unit": get_length_unit(metric_values),
+        },
+        {
+            "description": CHARGING_STATUS_ENTITY_DESCRIPTION,
+            "capability_check": lambda v: get_vehicle_capability(
+                v, "econnect_vehicle_status_capable"
+            )
+            or v.type == "electric",
+            "native_unit": None,
+            "suggested_unit": None,
+        },
+        {
+            "description": REMAINING_CHARGING_TIME_ENTITY_DESCRIPTION,
+            "capability_check": lambda v: get_vehicle_capability(
+                v, "econnect_vehicle_status_capable"
+            )
+            or v.type == "electric",
+            "native_unit": "min",
+            "suggested_unit": "min",
         },
         {
             "description": STATISTICS_ENTITY_DESCRIPTIONS_DAILY,
