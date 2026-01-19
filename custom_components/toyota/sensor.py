@@ -180,7 +180,6 @@ CHARGING_STATUS_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
     icon="mdi:ev-station",
     device_class=SensorDeviceClass.ENUM,
     options=["none", "plugged"],
-    state_class=SensorStateClass.MEASUREMENT,
     value_fn=lambda vehicle: None
     if vehicle.dashboard is None
     else (vehicle.dashboard.charging_status),
