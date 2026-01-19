@@ -66,7 +66,11 @@
         "name": "Total range"
       },
       "charging_status": {
-        "name": "Charging status"
+        "name": "Charging status",
+        "state": {
+          "none": "Not connected",
+          "plugged": "Plugged in"
+        }
       },
       "remaining_charge_time": {
         "name": "Remaining charging time"
