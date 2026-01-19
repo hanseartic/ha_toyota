@@ -57,7 +57,11 @@
         "name": "Total range"
       },
       "charging_status": {
-        "name": "Charging status"
+        "name": "Charging status",
+        "state": {
+          "none": "No connectat",
+          "plugged": "Endollat"
+        }
       },
       "remaining_charge_time": {
         "name": "Remaining charging time"

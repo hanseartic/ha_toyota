@@ -66,7 +66,11 @@
         "name": "Autonomie totale"
       },
       "charging_status": {
-        "name": "État de charge"
+        "name": "État de charge",
+        "state": {
+          "none": "Non connecté",
+          "plugged": "Branché"
+        }
       },
       "remaining_charge_time": {
         "name": "Temps de charge restant"

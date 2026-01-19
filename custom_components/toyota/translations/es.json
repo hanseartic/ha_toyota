@@ -57,7 +57,11 @@
         "name": "Total range"
       },
       "charging_status": {
-        "name": "Estado de carga"
+        "name": "Estado de carga",
+        "state": {
+          "none": "No conectado",
+          "plugged": "Enchufado"
+        }
       },
       "remaining_charge_time": {
         "name": "Tiempo de carga restante"
