@@ -68,6 +68,7 @@
       "charging_status": {
         "name": "Stav nabíjení",
         "state": {
+          "charging": "Nabíjení",
           "none": "Nepřipojeno",
           "plugged": "Připojeno"
         }

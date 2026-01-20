@@ -68,6 +68,7 @@
       "charging_status": {
         "name": "Töltési állapot",
         "state": {
+          "charging": "Töltés",
           "none": "Nincs csatlakoztatva",
           "plugged": "Csatlakoztatva"
         }
