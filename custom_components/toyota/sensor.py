@@ -193,7 +193,7 @@ REMAINING_CHARGE_TIME_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
     state_class=SensorStateClass.MEASUREMENT,
     value_fn=lambda vehicle: None
     if vehicle.dashboard is None
-    else (vehicle.dashboard.remaining_charge_time),
+    else (vehicle.dashboard.remaining_charge_time.total_seconds() // 60),
     attributes_fn=lambda vehicle: None,  # noqa : ARG005
 )
 
