@@ -71,6 +71,11 @@
           "charging": "Oplader",
           "none": "Ikke forbundet",
           "plugged": "Tilsluttet"
+        },
+        "state_attributes": {
+          "remaining_minutes": {
+            "name": "Minutter til fuld"
+          }
         }
       },
       "remaining_charge_time": {

@@ -71,6 +71,11 @@
           "charging": "En charge",
           "none": "Non connecté",
           "plugged": "Branché"
+        },
+        "state_attributes": {
+          "remaining_minutes": {
+            "name": "Minutes jusqu'à plein"
+          }
         }
       },
       "remaining_charge_time": {

@@ -71,6 +71,11 @@
           "charging": "Töltés",
           "none": "Nincs csatlakoztatva",
           "plugged": "Csatlakoztatva"
+        },
+        "state_attributes": {
+          "remaining_minutes": {
+            "name": "Perc a teljes töltésig"
+          }
         }
       },
       "remaining_charge_time": {

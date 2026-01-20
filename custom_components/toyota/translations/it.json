@@ -71,6 +71,11 @@
           "charging": "In carica",
           "none": "Non collegato",
           "plugged": "Collegato"
+        },
+        "state_attributes": {
+          "remaining_minutes": {
+            "name": "Minuti al completamento"
+          }
         }
       },
       "remaining_charge_time": {

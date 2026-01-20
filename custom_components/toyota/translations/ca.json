@@ -62,6 +62,11 @@
           "charging": "Carregant",
           "none": "No connectat",
           "plugged": "Endollat"
+        },
+        "state_attributes": {
+          "remaining_minutes": {
+            "name": "Minuts fins a ple"
+          }
         }
       },
       "remaining_charge_time": {

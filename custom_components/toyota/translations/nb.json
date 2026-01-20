@@ -71,6 +71,11 @@
           "charging": "Lader",
           "none": "Ikke tilkoblet",
           "plugged": "Tilkoblet"
+        },
+        "state_attributes": {
+          "remaining_minutes": {
+            "name": "Minutter til fullt"
+          }
         }
       },
       "remaining_charge_time": {

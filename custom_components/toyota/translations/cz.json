@@ -71,6 +71,11 @@
           "charging": "Nabíjení",
           "none": "Nepřipojeno",
           "plugged": "Připojeno"
+        },
+        "state_attributes": {
+          "remaining_minutes": {
+            "name": "Minut do plného nabití"
+          }
         }
       },
       "remaining_charge_time": {

@@ -71,6 +71,11 @@
           "charging": "Ładowanie",
           "none": "Niepodłączony",
           "plugged": "Podłączony"
+        },
+        "state_attributes": {
+          "remaining_minutes": {
+            "name": "Minuty do pełnego naładowania"
+          }
         }
       },
       "remaining_charge_time": {

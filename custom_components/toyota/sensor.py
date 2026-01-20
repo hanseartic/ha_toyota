@@ -183,7 +183,15 @@ CHARGING_STATUS_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
     value_fn=lambda vehicle: None
     if vehicle.dashboard is None
     else (vehicle.dashboard.charging_status),
-    attributes_fn=lambda vehicle: None,  # noqa : ARG005
+    attributes_fn=lambda vehicle: None
+    if vehicle.dashboard is None
+    else {
+        "remaining_minutes": (
+            vehicle.dashboard.remaining_charge_time.total_seconds() // 60
+            if vehicle.dashboard.remaining_charge_time is not None
+            else None
+        ),
+    },
 )
 REMAINING_CHARGE_TIME_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
     key="remaining_charge_time",
@@ -191,8 +199,9 @@ REMAINING_CHARGE_TIME_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
     icon="mdi:battery-clock",
     device_class=SensorDeviceClass.DURATION,
     state_class=SensorStateClass.MEASUREMENT,
+    suggested_display_precision=0,
     value_fn=lambda vehicle: None
-    if vehicle.dashboard is None
+    if (vehicle.dashboard is None or vehicle.dashboard.remaining_charge_time is None)
     else (vehicle.dashboard.remaining_charge_time.total_seconds() // 60),
     attributes_fn=lambda vehicle: None,  # noqa : ARG005
 )

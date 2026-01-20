@@ -71,6 +71,11 @@
           "charging": "Lädt",
           "none": "Nicht verbunden",
           "plugged": "Eingesteckt"
+        },
+        "state_attributes": {
+          "remaining_minutes": {
+            "name": "Minuten bis voll"
+          }
         }
       },
       "remaining_charge_time": {
